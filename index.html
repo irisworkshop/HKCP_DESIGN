@@ -4,48 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>目錄</title>
+    
+    <!-- 引入 Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
+        /* 預設字型：中文使用 DFKai-SB，英文使用 Roboto */
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f9f9f9;
+            font-family: 'DFKai-SB', sans-serif; /* 中文字體為優先 */
+            line-height: 2; /* 增加行距 */
+            text-align: center; /* 內容置中 */
+            margin: 20px;
         }
+
+        /* 為英文字符指定 Roboto 字型 */
+        body :lang(en),
+        body *:lang(en) {
+            font-family: 'Roboto', sans-serif; /* 英文使用 Roboto */
+        }
+
+        /* 標題樣式 */
         h1 {
-            text-align: center;
-            color: #333;
+            font-size: 32px; /* 主標題字體大小 */
+            margin-bottom: 20px;
         }
+
+        h2 {
+            font-size: 20px; /* 子標題字體大小 */
+            color: blue; /* 子標題顏色 */
+            margin-bottom: 20px;
+        }
+
+        .list-container {
+            display: inline-block; /* 使列表內容置中 */
+            text-align: left; /* 確保項目文字左對齊 */
+        }
+
         ul {
-            list-style: none;
-            padding: 0;
+            list-style: disc; /* 使用圓點符號作為項目符號 */
+            padding-left: 40px; /* 調整符號與文字的左邊距 */
         }
+
         li {
-            margin: 10px 0;
-            padding: 10px;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            text-align: center;
-            font-size: 18px;
-            transition: background-color 0.3s;
+            font-size: 18px; /* 選項文字大小 */
+            margin: 10px 0; /* 每行選項的上下間距 */
         }
-        li a {
-            text-decoration: none;
-            color: #007BFF;
+
+        a {
+            text-decoration: none; /* 移除超連結底線 */
+            color: black; /* 預設文字顏色為黑色 */
         }
-        li:hover {
-            background-color: #f0f0f0;
+
+        a:hover {
+            text-decoration: underline; /* 滑鼠懸停時顯示底線 */
+            color: blue; /* 滑鼠懸停時變藍色 */
         }
     </style>
 </head>
 <body>
     <h1>目錄</h1>
-    <ul>
-        <li><a href="1.html" target="_blank">1. HKCP網站設計:  白色風格之一</a></li>
-        <li><a href="2.html" target="_blank">2. HKCP網站設計:  白色風格之二</a></li>
-        <li><a href="3.html" target="_blank">3. HKCP網站設計:  深色風格之一</a></li>
-        <li><a href="4.html" target="_blank">4. HKCP網站設計:  深色風格之二</a></li>
-        <li><a href="5.html" target="_blank">5. Information Management Portal</a></li>
-    </ul>
+
+    <div class="list-container">
+        <h2>Part A - HKCP 網站設計</h2>
+        <ul>
+            <li><a href="white01.html" target="_blank">白色風格之一</a></li>
+            <li><a href="white02.html" target="_blank">白色風格之二</a></li>
+            <li><a href="dark01.html" target="_blank">深色風格之一</a></li>
+            <li><a href="https://blue02.netlify.app/" target="_blank">深色風格之二</a></li>
+        </ul>
+
+        <h2>Part B - Information Management Portal (IMP)</h2>
+        <ul>
+            <li><a href="Portal_LoginPage.html" target="_blank">Login Page</a></li>
+            <li><a href="Portal_Dashboard01.html" target="_blank">IMP User Dashboard</a></li>
+            <li><a href="Portal_Dashboard02_BPT.html" target="_blank">BPT Dashboard</a></li>
+            <li><a href="Portal_Dashboard02_HPT.html" target="_blank">HPT Dashboard</a></li>
+            <li><a href="Portal_Dashboard03.html" target="_blank">Fellow Dashboard</a></li>
+            <li><a href="Portal_Dashboard04.html" target="_blank">Trainer Dashboard</a></li>
+            <li><a href="Portal_Dashboard05_Approver.html" target="_blank">Approver Dashboard</a></li>
+            <li><a href="Portal_Dashboard05_ProgramDirector.html" target="_blank">Program Director Dashboard</a></li>
+            <li><a href="Portal_Dashboard06.html" target="_blank">Administration / Operator Dashboard</a></li>
+            <li><a href="Portal_ColorScheme.html" target="_blank">Color Scheme</a></li>
+        </ul>
+    </div>
 </body>
 </html>
